@@ -39,12 +39,14 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Description</th>
+                <th scope="col">View</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="recipe : ${recipes}">
                 <td th:text="${recipe.id}"></td>
                 <td th:text="${recipe.description}"></td>
+                <td><a href="#" th:href="@{'/recipes/' + ${recipe.id}}" th:text="${recipe.id}">View</a></td>
             </tr>
             </tbody>
         </table>

@@ -14,9 +14,9 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public class BaseEntity {
 
-    @EqualsAndHashCode.Include
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
+    @EqualsAndHashCode.Include
     private Long id;
 }
