@@ -8,4 +8,6 @@ public interface AbstractService<T, ID> {
     Iterable<T> findAll();
 
     Iterable<T> saveAll(Iterable<T> categories);
+
+    void deleteById(ID id);
 }
